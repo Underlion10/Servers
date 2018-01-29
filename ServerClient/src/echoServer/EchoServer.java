@@ -19,7 +19,11 @@ public class EchoServer {
 				BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));) {
 			String inputLine;
 			while ((inputLine = in.readLine()) != null) {
-				out.println(inputLine);
+				if(inputLine.equals("Hola")) {
+					out.println("Hola, ¿Qué tal?");
+				} else if(inputLine.equals("Adios")) {
+					out.println("Adios, ¡qué tengas un buen día!");
+				}
 			}
 		} catch (IOException e) {
 			System.out.println(
@@ -27,5 +31,4 @@ public class EchoServer {
 			System.out.println(e.getMessage());
 		}
 	}
-
 }
