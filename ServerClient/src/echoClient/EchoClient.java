@@ -11,7 +11,7 @@ public class EchoClient {
 
 	public static void main(String[] args) throws IOException {
 
-		String hostName = "localhost";
+		String hostName = "192.168.201.97";
 		int portNumber = 1234;
 
 		try (Socket echoSocket = new Socket(hostName, portNumber);
